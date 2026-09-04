@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lullaby Lane & Co. — thoughtfully chosen baby clothing, tiny treasures, and cozy essentials.">
+  <title>Lullaby Lane & Co. | Baby Clothing & Tiny Treasures</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Free shipping on orders over $75 · Made for little moments</div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Lullaby Lane & Co. home">
+      <img src="logo.jpg" alt="Lullaby Lane & Co. logo">
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">Our Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+      <button class="bag-btn" id="bagBtn" aria-label="Shopping bag">Bag <span id="bagCount">0</span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#shop">Shop</a>
+    <a href="#collections">Collections</a>
+    <a href="#about">Our Story</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Little clothes. Big memories.</p>
+        <h1>Made for the <em>sweetest</em> days.</h1>
+        <p class="hero-text">Soft, timeless pieces for tiny people and the moments you'll want to remember forever.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-dark" href="#shop">Shop the collection</a>
+          <a class="text-link" href="#about">Meet Lullaby Lane →</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Soft neutral baby clothing illustration">
+        <div class="sun"></div>
+        <div class="arch arch-one"></div>
+        <div class="arch arch-two"></div>
+        <div class="onesie">
+          <span class="sleeve left"></span>
+          <span class="sleeve right"></span>
+          <span class="snap one"></span><span class="snap two"></span><span class="snap three"></span>
+        </div>
+        <div class="moon">☾</div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><strong>Gentle fabrics</strong><span>Made with little ones in mind</span></div>
+      <div><strong>Timeless style</strong><span>Pieces you'll love to pass down</span></div>
+      <div><strong>Gift-ready</strong><span>Perfect for baby showers & new arrivals</span></div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Shop our favorites</p>
+          <h2>Little luxuries for little ones.</h2>
+        </div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="newborn">Newborn</button>
+          <button class="filter" data-filter="sets">Sets</button>
+          <button class="filter" data-filter="gifts">Gifts</button>
+        </div>
+      </div>
+
+      <div class="products" id="products">
+        <article class="product-card" data-category="newborn">
+          <div class="product-image sage"><span>✦</span><div class="mini-onesie"></div></div>
+          <div class="product-info"><div><h3>Willow Ribbed Onesie</h3><p>Newborn · 0–12M</p></div><strong>$28</strong></div>
+          <button class="add-btn" data-name="Willow Ribbed Onesie">Add to bag</button>
+        </article>
+        <article class="product-card" data-category="sets">
+          <div class="product-image oat"><span>☾</span><div class="mini-set"></div></div>
+          <div class="product-info"><div><h3>Moonlight Two-Piece Set</h3><p>3–24M</p></div><strong>$42</strong></div>
+          <button class="add-btn" data-name="Moonlight Two-Piece Set">Add to bag</button>
+        </article>
+        <article class="product-card" data-category="gifts">
+          <div class="product-image blush"><span>♡</span><div class="mini-blanket"></div></div>
+          <div class="product-info"><div><h3>Sweet Dreams Gift Set</h3><p>Gift boxed · Newborn</p></div><strong>$54</strong></div>
+          <button class="add-btn" data-name="Sweet Dreams Gift Set">Add to bag</button>
+        </article>
+        <article class="product-card" data-category="newborn">
+          <div class="product-image cream"><span>✧</span><div class="mini-romper"></div></div>
+          <div class="product-info"><div><h3>Sunday Morning Romper</h3><p>0–18M</p></div><strong>$34</strong></div>
+          <button class="add-btn" data-name="Sunday Morning Romper">Add to bag</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="collection-banner" id="collections">
+      <div>
+        <p class="eyebrow">The nursery edit</p>
+        <h2>Soft layers for slow mornings.</h2>
+        <p>Build a tiny wardrobe around calm colors, cozy textures, and pieces that make getting dressed feel special.</p>
+        <a class="btn btn-light" href="#shop">Explore baby essentials</a>
+      </div>
+      <div class="stacked-clothes">
+        <div class="cloth c1"></div><div class="cloth c2"></div><div class="cloth c3"></div>
+      </div>
+    </section>
+
+    <section class="story section" id="about">
+      <div class="story-image">
+        <div class="story-circle"><span>LL</span><small>little things<br>matter most</small></div>
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow">Our story</p>
+        <h2>A little lane for life's biggest little moments.</h2>
+        <p>Lullaby Lane & Co. was created around a simple idea: baby clothes should feel as beautiful as the memories made in them.</p>
+        <p>From first outfits to sleepy cuddles and family photos, we choose soft, comfortable pieces with a timeless feel.</p>
+        <a class="text-link" href="#contact">Say hello →</a>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="stars">✦ ✦ ✦</div>
+      <blockquote>“For the tiny humans who make ordinary days feel extraordinary.”</blockquote>
+      <p>— Lullaby Lane & Co.</p>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <div>
+        <p class="eyebrow">Stay in the loop</p>
+        <h2>Notes from the nursery.</h2>
+        <p>New arrivals, gift ideas, and little moments — sent occasionally.</p>
+      </div>
+      <form id="newsletterForm">
+        <input type="email" id="email" placeholder="Your email address" required>
+        <button class="btn btn-dark" type="submit">Join us</button>
+        <small id="formMessage"></small>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="logo.jpg" alt="Lullaby Lane & Co.">
+      <p>Thoughtful little things for life's sweetest beginnings.</p>
+    </div>
+    <div class="footer-links">
+      <div><h4>Shop</h4><a href="#shop">Newborn</a><a href="#shop">Baby Sets</a><a href="#shop">Gifts</a></div>
+      <div><h4>Help</h4><a href="#contact">Contact</a><a href="#contact">Shipping</a><a href="#contact">Returns</a></div>
+      <div><h4>Follow</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Pinterest</a></div>
+    </div>
+    <div class="copyright">© 2026 Lullaby Lane & Co. · All rights reserved.</div>
+  </footer>
+
+  <div class="drawer" id="drawer">
+    <div class="drawer-panel">
+      <div class="drawer-head"><h2>Your bag</h2><button id="closeBag">×</button></div>
+      <div id="bagItems" class="bag-items"><p class="empty">Your bag is waiting for something sweet.</p></div>
+      <div class="bag-footer"><div><span>Subtotal</span><strong id="subtotal">$0</strong></div><button class="btn btn-dark full" id="checkoutBtn">Checkout</button></div>
+    </div>
+  </div>
+
+  <div class="search-overlay" id="searchOverlay">
+    <button id="closeSearch">×</button>
+    <div><p class="eyebrow">Search Lullaby Lane</p><input id="searchInput" placeholder="Try “onesie” or “gift”"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
