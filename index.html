@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="announcement">Free shipping on orders over $75 · Made for little moments</div>
+  <div class="announcement">FREE SHIPPING ON ORDERS $75+ 🤍</div>
 
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Lullaby Lane & Co. home">
@@ -16,7 +16,9 @@
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#shop">Shop</a>
-      <a href="#collections">Collections</a>
+      <a href="#shop" data-jump-filter="baby">Baby</a>
+      <a href="#shop" data-jump-filter="girls">Girls</a>
+      <a href="#shop" data-jump-filter="boys">Boys</a>
       <a href="#about">Our Story</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -29,7 +31,9 @@
 
   <div class="mobile-menu" id="mobileMenu">
     <a href="#shop">Shop</a>
-    <a href="#collections">Collections</a>
+    <a href="#shop" data-jump-filter="baby">Baby</a>
+    <a href="#shop" data-jump-filter="girls">Girls</a>
+    <a href="#shop" data-jump-filter="boys">Boys</a>
     <a href="#about">Our Story</a>
     <a href="#contact">Contact</a>
   </div>
@@ -67,47 +71,27 @@
     <section class="section" id="shop">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Shop our favorites</p>
-          <h2>Little luxuries for little ones.</h2>
+          <p class="eyebrow">The first collection</p>
+          <h2>Sweet styles, easy prices.</h2>
         </div>
         <div class="filters">
           <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="newborn">Newborn</button>
-          <button class="filter" data-filter="sets">Sets</button>
-          <button class="filter" data-filter="gifts">Gifts</button>
+          <button class="filter" data-filter="baby">Baby</button>
+          <button class="filter" data-filter="girls">Girls</button>
+          <button class="filter" data-filter="boys">Boys</button>
         </div>
       </div>
 
       <div class="products" id="products">
-        <article class="product-card" data-category="newborn">
-          <div class="product-image sage"><span>✦</span><div class="mini-onesie"></div></div>
-          <div class="product-info"><div><h3>Willow Ribbed Onesie</h3><p>Newborn · 0–12M</p></div><strong>$28</strong></div>
-          <button class="add-btn" data-name="Willow Ribbed Onesie">Add to bag</button>
-        </article>
-        <article class="product-card" data-category="sets">
-          <div class="product-image oat"><span>☾</span><div class="mini-set"></div></div>
-          <div class="product-info"><div><h3>Moonlight Two-Piece Set</h3><p>3–24M</p></div><strong>$42</strong></div>
-          <button class="add-btn" data-name="Moonlight Two-Piece Set">Add to bag</button>
-        </article>
-        <article class="product-card" data-category="gifts">
-          <div class="product-image blush"><span>♡</span><div class="mini-blanket"></div></div>
-          <div class="product-info"><div><h3>Sweet Dreams Gift Set</h3><p>Gift boxed · Newborn</p></div><strong>$54</strong></div>
-          <button class="add-btn" data-name="Sweet Dreams Gift Set">Add to bag</button>
-        </article>
-        <article class="product-card" data-category="newborn">
-          <div class="product-image cream"><span>✧</span><div class="mini-romper"></div></div>
-          <div class="product-info"><div><h3>Sunday Morning Romper</h3><p>0–18M</p></div><strong>$34</strong></div>
-          <button class="add-btn" data-name="Sunday Morning Romper">Add to bag</button>
-        </article>
       </div>
     </section>
 
     <section class="collection-banner" id="collections">
       <div>
-        <p class="eyebrow">The nursery edit</p>
-        <h2>Soft layers for slow mornings.</h2>
-        <p>Build a tiny wardrobe around calm colors, cozy textures, and pieces that make getting dressed feel special.</p>
-        <a class="btn btn-light" href="#shop">Explore baby essentials</a>
+        <p class="eyebrow">Lullaby Lane favorites</p>
+        <h2>Boutique style without boutique prices.</h2>
+        <p>Playful, comfortable pieces for babies and kids — with free shipping when your order reaches $75.</p>
+        <a class="btn btn-light" href="#shop">Shop the collection</a>
       </div>
       <div class="stacked-clothes">
         <div class="cloth c1"></div><div class="cloth c2"></div><div class="cloth c3"></div>
@@ -164,7 +148,14 @@
     <div class="drawer-panel">
       <div class="drawer-head"><h2>Your bag</h2><button id="closeBag">×</button></div>
       <div id="bagItems" class="bag-items"><p class="empty">Your bag is waiting for something sweet.</p></div>
-      <div class="bag-footer"><div><span>Subtotal</span><strong id="subtotal">$0</strong></div><button class="btn btn-dark full" id="checkoutBtn">Checkout</button></div>
+      <div class="bag-footer">
+        <p id="shippingProgress" class="shipping-progress">Add $75.00 more for free shipping.</p>
+        <div><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+        <div><span>Shipping</span><strong id="shipping">$6.99</strong></div>
+        <div class="bag-total"><span>Estimated total</span><strong id="estimatedTotal">$6.99</strong></div>
+        <button class="btn btn-dark full" id="checkoutBtn">Checkout</button>
+        <small class="checkout-note">Secure checkout connection is the next setup step.</small>
+      </div>
     </div>
   </div>
 

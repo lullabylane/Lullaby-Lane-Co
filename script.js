@@ -2,31 +2,39 @@ const bag = [];
 const bagCount = document.getElementById("bagCount");
 const bagItems = document.getElementById("bagItems");
 const subtotal = document.getElementById("subtotal");
+const shippingEl = document.getElementById("shipping");
+const estimatedTotal = document.getElementById("estimatedTotal");
+const shippingProgress = document.getElementById("shippingProgress");
 const drawer = document.getElementById("drawer");
+
+function money(n){ return "$" + n.toFixed(2); }
 
 function renderBag() {
   bagCount.textContent = bag.length;
+  const sub = bag.reduce((sum, item) => sum + item.price, 0);
+  const shipping = sub >= 75 || sub === 0 ? 0 : 6.99;
+  subtotal.textContent = money(sub);
+  shippingEl.textContent = sub === 0 ? "$6.99" : (shipping === 0 ? "FREE" : money(shipping));
+  estimatedTotal.textContent = money(sub + shipping);
+
+  if (sub >= 75) shippingProgress.textContent = "You unlocked FREE shipping! 🤍";
+  else shippingProgress.textContent = `Add ${money(75 - sub)} more for free shipping.`;
+
   if (!bag.length) {
     bagItems.innerHTML = '<p class="empty">Your bag is waiting for something sweet.</p>';
-    subtotal.textContent = "$0";
     return;
   }
   bagItems.innerHTML = bag.map((item, i) =>
-    `<div class="bag-row"><span>${item}</span><button onclick="removeItem(${i})" style="border:0;background:none;cursor:pointer">×</button></div>`
+    `<div class="bag-row"><div class="bag-row-main"><span>${item.name}</span><small>Size ${item.size} · ${money(item.price)}</small></div><button onclick="removeItem(${i})" style="border:0;background:none;cursor:pointer">×</button></div>`
   ).join("");
-  const prices = {
-    "Willow Ribbed Onesie": 28,
-    "Moonlight Two-Piece Set": 42,
-    "Sweet Dreams Gift Set": 54,
-    "Sunday Morning Romper": 34
-  };
-  subtotal.textContent = "$" + bag.reduce((sum, item) => sum + prices[item], 0);
 }
 function removeItem(i){ bag.splice(i,1); renderBag(); }
 
 document.querySelectorAll(".add-btn").forEach(btn => {
   btn.addEventListener("click", () => {
-    bag.push(btn.dataset.name);
+    const card = btn.closest(".product-card");
+    const size = card.querySelector(".size-select").value;
+    bag.push({name: btn.dataset.name, price: Number(btn.dataset.price), size});
     renderBag();
     drawer.classList.add("open");
   });
@@ -35,16 +43,14 @@ document.getElementById("bagBtn").onclick = () => drawer.classList.add("open");
 document.getElementById("closeBag").onclick = () => drawer.classList.remove("open");
 drawer.addEventListener("click", e => { if(e.target === drawer) drawer.classList.remove("open"); });
 
-document.querySelectorAll(".filter").forEach(filter => {
-  filter.addEventListener("click", () => {
-    document.querySelectorAll(".filter").forEach(f => f.classList.remove("active"));
-    filter.classList.add("active");
-    const value = filter.dataset.filter;
-    document.querySelectorAll(".product-card").forEach(card => {
-      card.style.display = value === "all" || card.dataset.category === value ? "" : "none";
-    });
+function applyFilter(value){
+  document.querySelectorAll(".filter").forEach(f => f.classList.toggle("active", f.dataset.filter === value));
+  document.querySelectorAll(".product-card").forEach(card => {
+    card.style.display = value === "all" || card.dataset.category === value || (value==="baby" && ["baby","girls","boys"].includes(card.dataset.category) && card.querySelector(".product-info p").textContent.includes("0–3M")) ? "" : "none";
   });
-});
+}
+document.querySelectorAll(".filter").forEach(filter => filter.addEventListener("click", () => applyFilter(filter.dataset.filter)));
+document.querySelectorAll("[data-jump-filter]").forEach(link => link.addEventListener("click", () => setTimeout(() => applyFilter(link.dataset.jumpFilter),50)));
 
 const mobileMenu = document.getElementById("mobileMenu");
 document.getElementById("menuBtn").onclick = () => {
@@ -58,6 +64,12 @@ document.getElementById("searchBtn").onclick = () => {
   setTimeout(() => document.getElementById("searchInput").focus(), 100);
 };
 document.getElementById("closeSearch").onclick = () => searchOverlay.classList.remove("open");
+document.getElementById("searchInput").addEventListener("input", e => {
+  const q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll(".product-card").forEach(card => {
+    card.style.display = !q || card.dataset.name.includes(q) ? "" : "none";
+  });
+});
 
 document.getElementById("newsletterForm").addEventListener("submit", e => {
   e.preventDefault();
@@ -65,6 +77,6 @@ document.getElementById("newsletterForm").addEventListener("submit", e => {
   e.target.reset();
 });
 document.getElementById("checkoutBtn").onclick = () => {
-  alert("Checkout is ready to connect to your payment provider.");
+  alert("Your catalog and cart are ready. The next step is connecting a real payment/checkout provider.");
 };
 renderBag();
