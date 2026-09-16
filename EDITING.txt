@@ -1,0 +1,16 @@
+LULLABY LANE & CO. – QUICK EDITING
+
+PRODUCT NAMES & PRICES
+Open script.js. At the very top is the products list. Change the text after "name" or the number after "price" for any product.
+
+PRODUCT PHOTOS
+product-01.jpg through product-48.jpg match the products in script.js.
+
+SIZES
+Current sizes: 0–3, 3–6, 6–12, 12–18, 2T.
+
+SHIPPING
+$6.99 under $75; free shipping at $75+.
+
+IMPORTANT
+Keep your existing logo.jpg in the GitHub repository. This update does not replace it.
