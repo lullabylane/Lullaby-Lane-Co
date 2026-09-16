@@ -3,7 +3,7 @@
 const products = [
   {
     "id": 1,
-    "name": "Daddy's girl bubble",
+    "name": "Mama’s Bestie Bow Bubble",
     "price": 21.99,
     "category": "girls",
     "image": "product-01.jpg",
@@ -45,9 +45,9 @@ const products = [
   },
   {
     "id": 4,
-    "name": "Chicken Bubble",
+    "name": "Blue Duck Bubble",
     "price": 21.99,
-    "category": "girls",
+    "category": "boys",
     "image": "product-04.jpg",
     "sizes": [
       "0–3",
@@ -59,7 +59,7 @@ const products = [
   },
   {
     "id": 5,
-    "name": "Camo Duck Call Bubble",
+    "name": "Camo Call Bubble",
     "price": 21.99,
     "category": "boys",
     "image": "product-05.jpg",
@@ -73,7 +73,7 @@ const products = [
   },
   {
     "id": 6,
-    "name": "Camo Pajama Set",
+    "name": "Camo Zip Romper",
     "price": 22.99,
     "category": "boys",
     "image": "product-06.jpg",
@@ -129,7 +129,7 @@ const products = [
   },
   {
     "id": 10,
-    "name": "Mama’s Girl Strawberry Bubble",
+    "name": "Mama’s Girl Red Bubble",
     "price": 21.99,
     "category": "girls",
     "image": "product-10.jpg",
@@ -143,7 +143,7 @@ const products = [
   },
   {
     "id": 11,
-    "name": "Cowgirl Bubble",
+    "name": "Pink Paisley Bubble",
     "price": 21.99,
     "category": "girls",
     "image": "product-11.jpg",
@@ -170,22 +170,8 @@ const products = [
     ]
   },
   {
-    "id": 13,
-    "name": "Blue Duck Bubble",
-    "price": 21.99,
-    "category": "boys",
-    "image": "product-13.jpg",
-    "sizes": [
-      "0–3",
-      "3–6",
-      "6–12",
-      "12–18",
-      "2T"
-    ]
-  },
-  {
     "id": 14,
-    "name": "I Heart Dad Gingham Bubble",
+    "name": "Dad Blue Gingham Bubble",
     "price": 21.99,
     "category": "boys",
     "image": "product-14.jpg",
@@ -227,7 +213,7 @@ const products = [
   },
   {
     "id": 17,
-    "name": "Mama's Boy Woodland Camo Romper",
+    "name": "Woodland Camo Romper",
     "price": 22.99,
     "category": "boys",
     "image": "product-17.jpg",
@@ -255,7 +241,7 @@ const products = [
   },
   {
     "id": 19,
-    "name": "Duck Bubble",
+    "name": "Bee Bubble",
     "price": 21.99,
     "category": "girls",
     "image": "product-19.jpg",
@@ -297,7 +283,7 @@ const products = [
   },
   {
     "id": 23,
-    "name": "Big Green Tractor Romper",
+    "name": "Green Tractor Romper",
     "price": 22.99,
     "category": "boys",
     "image": "product-23.jpg",
@@ -339,7 +325,7 @@ const products = [
   },
   {
     "id": 26,
-    "name": "Puppy Zip Romper",
+    "name": "Blue Outdoor Zip Romper",
     "price": 22.99,
     "category": "boys",
     "image": "product-26.jpg",
@@ -353,7 +339,7 @@ const products = [
   },
   {
     "id": 27,
-    "name": "Camo Outdoorsman Romper",
+    "name": "Camo Pocket Romper",
     "price": 22.99,
     "category": "boys",
     "image": "product-27.jpg",
@@ -381,7 +367,7 @@ const products = [
   },
   {
     "id": 29,
-    "name": "Woodland Duck Bubble",
+    "name": "Mama’s Boy Woodland Bubble",
     "price": 21.99,
     "category": "boys",
     "image": "product-29.jpg",
@@ -423,7 +409,7 @@ const products = [
   },
   {
     "id": 32,
-    "name": Mallard Duck Zip Romper",
+    "name": "Outdoor Zip Romper",
     "price": 22.99,
     "category": "boys",
     "image": "product-32.jpg",
@@ -507,7 +493,7 @@ const products = [
   },
   {
     "id": 38,
-    "name": "Gray Camo Duck Set",
+    "name": "Gray Duck Camo Set",
     "price": 25.99,
     "category": "boys",
     "image": "product-38.jpg",
@@ -567,6 +553,20 @@ const products = [
     "price": 25.99,
     "category": "boys",
     "image": "product-42.jpg",
+    "sizes": [
+      "0–3",
+      "3–6",
+      "6–12",
+      "12–18",
+      "2T"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Camo Pajama Set",
+    "price": 25.99,
+    "category": "boys",
+    "image": "product-43.jpg",
     "sizes": [
       "0–3",
       "3–6",
