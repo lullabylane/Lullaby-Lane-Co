@@ -170,6 +170,21 @@ const products = [
     ]
   },
   {
+    "id": 13,
+    "name": "Blue Duck Bubble",
+    "price": 21.99,
+    "category": "boys",
+    "image": "product-13.jpg",
+    "sizes": [
+      "0–3",
+      "3–6",
+      "6–12",
+      "12–18",
+      "2T"
+    ]
+  },
+  {
+    ]
     "id": 14,
     "name": "Dad Blue Gingham Bubble",
     "price": 21.99,
